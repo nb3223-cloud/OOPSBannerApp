@@ -1,28 +1,30 @@
 /**
- * UC3 - Print OOPS Banner using String.join()
+ * UC4 - Print OOPS Banner using String Array and Loop
  * Author: sysadmin
- * Version: 3.0
+ * Version: 4.0
  */
 
 public class OOPSBanner {
 
     public static void main(String[] args) {
 
-        String line1 = String.join(" ", "*****", "*****", "*****", "*****");
-        String line2 = String.join(" ", "*   *", "*   *", "*   *", "*   *");
-        String line3 = String.join(" ", "*   *", "*   *", "*   *", "*    ");
-        String line4 = String.join(" ", "*   *", "*****", "*****", "*****");
-        String line5 = String.join(" ", "*   *", "*    ", "*    ", "    *");
-        String line6 = String.join(" ", "*   *", "*    ", "*    ", "*   *");
-        String line7 = String.join(" ", "*****", "*    ", "*****", "*****");
+        // Store banner lines in String array using String.join()
+        String[] banner = {
 
-        System.out.println(line1);
-        System.out.println(line2);
-        System.out.println(line3);
-        System.out.println(line4);
-        System.out.println(line5);
-        System.out.println(line6);
-        System.out.println(line7);
+            String.join(" ", "*****", "*****", "*****", "*****"),
+            String.join(" ", "*   *", "*   *", "*   *", "*   *"),
+            String.join(" ", "*   *", "*   *", "*   *", "*    "),
+            String.join(" ", "*   *", "*****", "*****", "*****"),
+            String.join(" ", "*   *", "*    ", "*    ", "    *"),
+            String.join(" ", "*   *", "*    ", "*    ", "*   *"),
+            String.join(" ", "*****", "*    ", "*****", "*****")
+
+        };
+
+        // Print banner using loop
+        for (String line : banner) {
+            System.out.println(line);
+        }
 
     }
 }
